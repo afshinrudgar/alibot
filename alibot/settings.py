@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'alibot.guardian',
+    'alibot.kid',
+    'alibot.bot'
 ]
 
 MIDDLEWARE = [
