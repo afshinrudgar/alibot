@@ -6,7 +6,7 @@ def normalize_mobile_number(num):
     return num
 
 
-class UserManager(BaseUserManager):
+class GuardianManager(BaseUserManager):
     use_in_migrations = True
 
     def _create_user(self, mobile_number, password='unused-password', **extra_fields):
@@ -24,6 +24,9 @@ class UserManager(BaseUserManager):
     def create_user(self, mobile_number, password=None, **extra_fields):
         extra_fields.setdefault('is_superuser', False)
         return self._create_user(mobile_number, password, **extra_fields)
+
+    def get_by_telegram_id(self, tid):
+        return self.get(telegram_id=tid)
 
     def create_superuser(self, mobile_number, password, **extra_fields):
         extra_fields.setdefault('is_superuser', True)

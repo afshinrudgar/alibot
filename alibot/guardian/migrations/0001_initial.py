@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
                 'verbose_name_plural': 'users',
             },
             managers=[
-                ('objects', alibot.guardian.managers.UserManager()),
+                ('objects', alibot.guardian.managers.GuardianManager()),
             ],
         ),
     ]

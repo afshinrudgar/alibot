@@ -8,18 +8,16 @@ from alibot.guardian.models import Guardian
 
 
 class Kid(models.Model):
-    first_name = models.CharField(_('first name'), max_length=50)
-    last_name = models.CharField(_('last name'), max_length=50)
+    full_name = models.CharField(_('full name'), max_length=50)
     age = models.SmallIntegerField(_('age'), blank=True, null=True)
     guardian = models.ForeignKey(Guardian, related_name='kids', null=True, blank=True)
 
     class Meta:
-        verbose_name = _('kid')
-        verbose_name_plural = _('kids')
-        unique_together = ('first_name', 'last_name')
+        verbose_name = _('Kid')
+        verbose_name_plural = _('Kids')
 
     def __unicode__(self):
-        return '%s %s' % (self.first_name, self.last_name)
+        return '%s' % self.full_name
 
 
 class Report(models.Model):

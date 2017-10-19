@@ -5,4 +5,7 @@ class Command(BaseCommand):
     help = 'Closes the specified poll for voting'
 
     def handle(self, *args, **options):
-        self.stdout.write(self.style.SUCCESS('Successfully closed poll'))
+        from alibot.bot import updater
+        updater.start_polling()
+        self.stdout.write(self.style.SUCCESS('Bot started'))
+        updater.idle()
