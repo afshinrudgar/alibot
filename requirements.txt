@@ -1,6 +1,6 @@
 adium-theme-ubuntu==0.3.4
 amqp==1.4.9
-ansible==2.2.1.0
+ansible==2.10.0
 anyjson==0.3.3
 backports.shutil-get-terminal-size==1.0.0
 beautifulsoup4==4.6.0
