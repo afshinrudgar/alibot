@@ -41,7 +41,7 @@ matplotlib==2.0.2
 meld==3.16.4
 msgpack-python==0.4.8
 netaddr==0.7.18
-numpy==1.13.1
+numpy==1.22.0
 openpyxl==2.4.8
 pandas==0.20.3
 paramiko==2.0.0
